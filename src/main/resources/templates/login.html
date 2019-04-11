@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+		<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" />
+		<link rel="stylesheet" th:href="@{/css/index.css}">
+		<script type="text/javascript" th:src="@{/js/jquery-1.8.3.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/jquery.validate.min.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/messages_zh.js}"></script>
+		<script type="text/javascript" th:src="@{/js/logreg.js}"></script>
+		
+		<link rel="stylesheet" href="/css/login.css" />
+		
+		<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="tytle">
+				<h1 style="color: white;">Identity Recognition System</h1>
+			</div>
+			<div id="tytle_2"><b>登录</b></div>
+			<form id="content" action="/login" method="post" accept-charset="utf-8" >
+				<div style="margin-left: 42px;">
+					<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+					<span style="position: absolute;margin-left:532px ;margin-top: 169px;">用户角色</span>
+					<select name="character" id="char">
+						<option value="admin" class="opt">管理员</option>
+						<option value="programer" class="opt">开发人员</option>
+						<option value="tester" class="opt">测试人员</option>
+						<option value="user" class="opt">普通用户</option>
+					</select>
+				</div>
+				<div style="margin-left: 42px;">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<span style="position: absolute;margin-left:533px ;margin-top: 229px;">用户名</span>
+					<input type="text" class="form-control"  placeholder="username" name="username" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:229px ;width: 228px;">
+				</div>
+				<div style="margin-left: 42px;">
+					<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+					<span style="position: absolute;margin-left:533px ;margin-top: 288px;">密码</span>
+					<input type="password" class="form-control"  placeholder="password" name="password" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:288px ;width: 228px;">
+				</div>
+				<div><button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="position: absolute;margin-left:668px;margin-top: 382px;width: 152px;">登录</button></div>
+			</form>
+		</div>
+	</body>
+</html>

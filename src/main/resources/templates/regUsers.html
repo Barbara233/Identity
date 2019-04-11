@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册用户查询</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="/css/blockinfo.css">
+		<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="tytle">
+				<h1 style="color: white;">Identity Recognition System</h1>
+			</div>
+			<form action="#" method="get"  style="color: white;font-family: '微软雅黑';font-size:18px ;">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3"><p class="col_1">用户地址</p><input type="text" name="address" class="form-control keyword"/></div>
+					<div class="col-md-3"><p class="col_1">注册用户名</p><input type="text" name="operate" class="form-control keyword"/></div>
+				</div>
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3">
+						<div style="margin-left: 42px;">
+							<p style="position: absolute;margin-left: -138px;">用户角色</p>
+							<select name="character" id="char">
+								<option value="admin" class="opt">管理员</option>
+								<option value="programer" class="opt">开发人员</option>
+								<option value="tester" class="opt">测试人员</option>
+								<option value="user" class="opt">普通用户</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-3"><p class="col_2">注册时间</p><input type="datetime" name="regTime" class="form-control keyword"/></div>
+				</div>
+				<button type="submit" class="btn btn-primary" style="width: 102px; position: absolute;margin-left: 1172px;margin-top: -30px;">搜索</button>
+			</form>
+			<table class="table">
+         		<thead>
+         			<tr>
+     					<th>用户地址</th>
+     					<th>注册用户名</th>
+     					<th>用户角色</th>
+     					<th>注册时间</th>
+         			</tr>
+         		</thead>
+         		<tbody>
+         			<tr>
+         				<td>1211111111111</td>
+         				<td>122222222222221</td>
+         				<td>2121212</td>
+         				<td>11212121</td>
+         			</tr>
+         			<tr>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         			</tr>
+         			<tr>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         			</tr>
+         			<tr>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         				<td>12121212</td>
+         			</tr>
+         		</tbody>
+			</table>
+		</div>
+	</body>
+</html>
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+		<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" />
+		<link rel="stylesheet" th:href="@{/css/index.css}">
+		<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
+		<script type="text/javascript" th:src="@{/js/jquery-1.8.3.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/jquery.validate.min.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/messages_zh.js}"></script>
+		
+		<link rel="stylesheet" th:href="@{/css/login.css}" />
+		
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+		<style>
+			i{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="tytle">
+				<h1 style="color: white;">Identity Recognition System</h1>
+			</div>
+			<form id="content" action="#" method="get" accept-charset="utf-8" >
+				<div >
+					<i class="fa fa-bitcoin (alias) fa-2x" style="position: absolute;margin-left: 513px;margin-top: 97px;"></i>
+					<span style="position: absolute;margin-left:565px ;margin-top: 106px;">余额  <p style="margin-left:92px ;margin-top: -26px;" th:text="${balance}"></p><p style="margin-left:336px ;margin-top: -38px;">wei</p></span>
+				</div>
+				<div style="margin-left: 42px;">
+					<i class="fa fa-address-card-o fa-2x" style="position: absolute;margin-left: 463px;margin-top: 167px;"></i><br />
+					<span style="position: absolute;margin-left:521px ;margin-top: 147px;">对方账号</span>
+					<input type="text" class="form-control"  placeholder="username" name="username" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 619px;margin-top:143px ;width: 228px;">
+				</div>
+				<div style="margin-left: 42px;">
+					<span class="fa-stack fa-lg" style="position: absolute;margin-left:466px ;margin-top: 210px;font-size:20px ;">
+  						<i class="fa fa-refresh fa-stack-2x"></i>
+  						<i class="fa fa-bitcoin (alias) fa-stack-1x"></i>
+					</span>
+					<span style="position: absolute;margin-left:521px ;margin-top: 216px;">转账金额</span>
+					<input type="password" class="form-control"  placeholder="password" name="password" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 619px;margin-top:214px ;width: 228px;">
+				</div>
+				<div><button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="position: absolute;margin-left:642px;margin-top: 306px;width: 152px;">确认转账</button></div>
+				<div><a href="check.html" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="position: absolute;margin-left:642px;margin-top: 362px;width: 152px;">账单查询</a></div>
+				<a  href="#" onClick="javascript :history.back(-1);" style="color: white; position: absolute;margin-top: 364px;margin-left:810px ;"><i>点击返回</i></a>
+			</form>
+		</div>
+	</body>
+</html>

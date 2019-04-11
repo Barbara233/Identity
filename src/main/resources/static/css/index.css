@@ -1,0 +1,68 @@
+.container-fluid{
+	background: url(../img/img_3.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 722px;
+	
+}
+#tytle{
+	font-family: "arial black";
+	margin-left: 477px;
+	
+}
+#content{
+	color:white;
+	font-family:"微软雅黑";
+	font-size:20px;
+}
+#contact{
+	position: absolute;
+	margin-left:529px;
+	margin-top: 181px;
+}
+#add{
+	position: absolute;
+	margin-left: 529px;
+	margin-top: 224px;
+}
+#reg{
+	position: absolute;
+	margin-left: 529px;
+	margin-top: 273px;
+}
+.form-control{
+	color: white;
+	position: absolute;
+	margin-left: 162px;
+	margin-top: -34px;
+	width:300px;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+ /* WebKit browsers */ 
+color: #666; 
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+/* Mozilla Firefox 4 to 18 */ 
+color: #666; 
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+ /* Mozilla Firefox 19+ */ 
+color: #666; 
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+	color: #666; 
+}
+#login{
+	position: absolute;
+	margin-left: 630px;
+	margin-top: 360px;
+}
+#register{
+	position: absolute;
+	margin-left: 818px;
+	margin-top: 360px;
+}
+.btn-primary{
+	width: 75px;
+	height: 36px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+		<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" />
+		<link rel="stylesheet" th:href="@{/css/index.css}">
+		<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
+		<link rel="stylesheet" th:href="@{/css/admin.css}" />
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/logAfter.js}" ></script> 
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="tytle">
+				<h1 style="color: white;">Identity Recognition System</h1>
+			</div>
+			<div class="row" id="content_2">
+				<a href="logout" id=logout>
+					<div class="col-md-1" >
+						<i class="fa  fa-sign-out fa-5x"></i><br>
+					</div>
+					<b class="word">注销账号</b>
+				</a>
+				<a href="changeInfo.html">
+					<div class="col-md-1">
+						<i class="fa fa-keyboard-o fa-5x"></i><br />
+					</div>
+					<b class="word">修改信息</b>
+				</a>
+				<a href="blockInfo.html">
+					<div class="col-md-1">
+						<i class="fa fa-search fa-5x"></i><br />
+					</div>
+					<b class="word">区块查询</b>
+				</a>
+				<a href="regUsers.html">
+					<div class="col-md-1">
+						<i class="fa fa-users fa-5x"></i><br />
+					</div>
+					<b class="word">已注册用户</b>
+				</a>
+				<a href="to_money">
+					<div class="col-md-1">
+						<i class="fa fa-bitcoin (alias) fa-5x"></i><br />
+					</div>
+					<b class="word" style="position: absolute;margin-left: -58px;margin-top: 86px;">钱包</b>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,61 @@
+#tytle{
+	font-family: "arial black";
+	margin-left: 477px;
+	
+}
+#tytle_2{
+	color: white;
+	font-family: "微软雅黑";
+	font-size:25px;
+	position: absolute;
+	margin-left: 726px;
+	margin-top: 115px;
+}
+.glyphicon-paperclip{
+	position: absolute;
+	margin-left: 504px;
+	margin-top: 242px;
+}
+#char{
+	position: absolute;
+	margin-left: 631px;
+	margin-top:170px;
+	width: 224px;
+	background-color: rgba(255,255,255,0.3);
+	
+}
+.opt{
+	 background:rgba(4, 18, 50, 0.55) none repeat scroll !important
+}
+.glyphicon-user{
+	position: absolute;
+	margin-left: 506px;
+	margin-top: 303px;
+}
+.glyphicon-lock{
+	position: absolute;
+	margin-left: 506px;
+	margin-top: 361px;
+}
+
+label.error{
+	font-family:georgia;
+	font-size: 18px;
+	font-style: normal;
+	color: white;
+}
+#char-error{
+	position: absolute;
+	margin-top: 203px;
+	margin-left: 870px;
+}
+#username-error{
+	position: absolute;
+	margin-top: 233px;
+	margin-left: 870px;
+}
+#password-error{
+	position: absolute;
+	margin-top: 297px;
+	margin-left:870px;
+}			

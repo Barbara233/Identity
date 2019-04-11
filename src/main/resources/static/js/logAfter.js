@@ -1,0 +1,21 @@
+$(function(){
+    $("#logout").mousedown(function(){
+    	$.ajax({
+    			url:"/logout",
+    			async:true,
+    			type:"POST",
+    			success:function(data){
+    				if(data==true){
+    				 	alert("注销成功")
+    				 	window.location.href="/index"
+    				}
+    				else{
+    					alert("注销失败")
+    				}
+    	         },
+    	        error:function(){
+    	        	alert("请求错误");
+    	        },
+    	 });
+    })
+})
