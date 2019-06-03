@@ -9,6 +9,8 @@
 		<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
 		<link rel="stylesheet" th:href="@{/css/user.css}" />
 		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+				<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 		<script type="text/javascript" th:src="@{/js/logAfter.js}" ></script>
 	</head>
 	<body>
@@ -17,25 +19,29 @@
 				<h1 style="color: white;">Identity Recognition System</h1>
 			</div>
 			<div class="row" id="content_2">
-				<a href="logout" id=logout>
+				<!-- <a href="logout" id=logout>
 					<div class="col-md-1">
 						<i class="fa  fa-sign-out fa-5x"></i><br>
 					</div>
 					<b class="word">注销账号</b>
-				</a>
-				<a href="changeInfo.html">
+				</a> -->
+				<div class="col-md-1" id=logout style="cursor: pointer;">
+						<i class="fa  fa-sign-out fa-5x"></i><br>
+				</div>
+					<b class="word" style="cursor: pointer;margin-left:-77px;margin-top:87px">注销账号</b>
+				<a href="/to_changeInfo">
 					<div class="col-md-1">
 						<i class="fa fa-keyboard-o fa-5x"></i><br />
 					</div>
 					<b class="word">修改信息</b>
 				</a>
-				<a href="#">
+				<a href="/to_blockInfo">
 					<div class="col-md-1">
 						<i class="fa fa-search fa-5x"></i><br />
 					</div>
-					<b class="word">区块查询</b>
+					<b class="word" style="margin-left: -78px;">区块交易记录</b>
 				</a>
-				<a href="money.html">
+				<a href="/to_money">
 					<div class="col-md-1">
 						<i class="fa fa-bitcoin (alias) fa-5x"></i><br />
 					</div>

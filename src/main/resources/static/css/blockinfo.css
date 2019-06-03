@@ -32,13 +32,16 @@
 }
 .table{
 	color: white;
-	width: 1000px;
+	width: 1199px;
 	margin-top: 24px;
-	margin-left: 288px;
+	margin-left: 199px;
 	font-size: 17px;
 }
 tr{
 	background: rgba(4, 18, 50, 0.55);
+}
+td{
+	margin-left:10px;
 }
 #char{
 	position: absolute;

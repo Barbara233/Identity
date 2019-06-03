@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
 		<title>账号信息修改</title>
-		<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
-		<link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="/css/index.css">
-		<script type="text/javascript" src="/js/jquery-1.8.3.js" ></script>
-		<script type="text/javascript" src="/js/jquery.validate.min.js" ></script>
-		<script type="text/javascript" src="/js/messages_zh.js"></script>
-		<script type="text/javascript" src="/js/logreg.js"></script>
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+		<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" />
+		<link rel="stylesheet" th:href="@{/css/index.css}">
+		<script type="text/javascript" th:src="@{js/jquery-1.8.3.js}"></script>
+		<script type="text/javascript" th:src="@{/js/jquery.validate.min.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/messages_zh.js}"></script>
+		<script type="text/javascript" th:src="@{/js/logreg.js}"></script>
 		
-		<link rel="stylesheet" href="/css/login.css" />
+		<link rel="stylesheet"  th:href="@{/css/login.css}" />
 		
-		<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
 		<style>
 			.glyphicon{
 				margin-left: 480px ;
@@ -42,23 +42,24 @@
 			<div id="tytle">
 				<h1 style="color: white;">Identity Recognition System</h1>
 			</div>
-			<form id="content" action="#" method="get" accept-charset="utf-8" >
+			<form id="content" action="/changeInfo" method="post" accept-charset="utf-8" >
 				<div style="margin-left: 42px;">
 					<span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-top: 242px;"></span>
 					<span style="position: absolute;margin-left:510px ;margin-top: 169px;">新用户名</span>
-					<input type="text" class="form-control"  placeholder="username" name="username" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:169px ;width: 228px;">
+					<input type="text" class="form-control" id="username" placeholder="username" name="username" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:169px ;width: 228px;">
 				</div>
 				<div style="margin-left: 42px;">
 					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 					<span style="position: absolute;margin-left:510px ;margin-top: 229px;">新密码</span>
-					<input type="password" class="form-control"  placeholder="password" name="password" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:229px ;width: 228px;">
+					<input type="password" class="form-control" id="password" placeholder="password" name="password" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:229px ;width: 228px;">
 				</div>
 				<div style="margin-left: 42px;">
 					<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
 					<span style="position: absolute;margin-left:510px ;margin-top: 289px;">重复新密码</span>
 					<input type="password" class="form-control"  placeholder="repassword" name="repassword" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:289px ;width: 228px;">
 				</div>
-				<div><button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="position: absolute;margin-left:668px;margin-top: 382px;width: 152px;">登录</button></div>
+				<div><button type="submit" id="_change" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="position: absolute;margin-left:668px;margin-top: 382px;width: 152px;">确认</button></div>
+				<a  href="#" onClick="javascript :history.back(-1);" style="color: white; position: absolute;margin-top: 386px;margin-left:840px ;"><i>点击返回</i></a>
 			</form>
 		</div>
 	</body>

@@ -16,6 +16,7 @@ $(function(){
 			repassword:{
 				required:true,
 				digits:true,
+				equalTo: "#password",
 				minlength:6
 			}
 		},
@@ -35,6 +36,7 @@ $(function(){
 			repassword:{
 				required:"密码不能为空！",
 				digits:"密码必须是数字！",
+				equalTo:"密码不一致",
 				minlength:"密码不得少于6位！"
 			}
 			

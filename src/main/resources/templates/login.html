@@ -11,9 +11,10 @@
 		<script type="text/javascript" th:src="@{/js/messages_zh.js}"></script>
 		<script type="text/javascript" th:src="@{/js/logreg.js}"></script>
 		
-		<link rel="stylesheet" href="/css/login.css" />
+		<link rel="stylesheet" th:href="@{/css/login.css}" />
 		
-		<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+		
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -25,7 +26,7 @@
 				<div style="margin-left: 42px;">
 					<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
 					<span style="position: absolute;margin-left:532px ;margin-top: 169px;">用户角色</span>
-					<select name="character" id="char">
+					<select name="role" id="char">
 						<option value="admin" class="opt">管理员</option>
 						<option value="programer" class="opt">开发人员</option>
 						<option value="tester" class="opt">测试人员</option>
@@ -43,6 +44,7 @@
 					<input type="password" class="form-control"  placeholder="password" name="password" style="background-color: rgba(255,255,255,0.2);position: absolute;margin-left: 627px;margin-top:288px ;width: 228px;">
 				</div>
 				<div><button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="position: absolute;margin-left:668px;margin-top: 382px;width: 152px;">登录</button></div>
+				<a  href="/index" style="color: white; position: absolute;margin-top: 386px;margin-left:840px ;"><i>返回首页</i></a>
 			</form>
 		</div>
 	</body>

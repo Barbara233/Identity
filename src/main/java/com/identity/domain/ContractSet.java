@@ -1,7 +1,11 @@
 package com.identity.domain;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import org.springframework.stereotype.Repository;
 import org.web3j.crypto.Credentials;
@@ -9,6 +13,7 @@ import org.web3j.protocol.Web3j;
 import org.web3j.protocol.http.HttpService;
 import org.web3j.tx.ClientTransactionManager;
 import org.web3j.tx.Contract;
+import org.web3j.utils.Async;
 
 @Repository("contractSet")
 public class ContractSet {
@@ -52,11 +57,12 @@ public class ContractSet {
 	
 	public ContractSet() {
 		try {
-			web3j = Web3j.build(new HttpService("http://localhost:8545"));
+		    web3j = Web3j.build(new HttpService("http://localhost:8545"));
 			accounts = web3j.ethAccounts().send().getAccounts();
-			ctm=new ClientTransactionManager(web3j,accounts.get(0));
+			ClientTransactionManager ctm=new ClientTransactionManager(web3j,accounts.get(0));
 			identity=Identity.deploy(web3j, ctm,Contract.GAS_PRICE,Contract.GAS_LIMIT).send();
 			contractAddress=identity.getContractAddress();
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}

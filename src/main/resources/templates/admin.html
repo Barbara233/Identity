@@ -2,13 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
-		<title>首页</title>
+		<title>管理员</title>
 		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
 		<link rel="stylesheet" th:href="@{/css/bootstrap-theme.min.css}" />
 		<link rel="stylesheet" th:href="@{/css/index.css}">
 		<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
 		<link rel="stylesheet" th:href="@{/css/admin.css}" />
 		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 		<script type="text/javascript" th:src="@{/js/logAfter.js}" ></script> 
 	</head>
 	<body>
@@ -17,35 +18,36 @@
 				<h1 style="color: white;">Identity Recognition System</h1>
 			</div>
 			<div class="row" id="content_2">
-				<a href="logout" id=logout>
-					<div class="col-md-1" >
+				<!-- <a href="logout"> -->
+					<div class="col-md-1" id=logout style="cursor: pointer;">
 						<i class="fa  fa-sign-out fa-5x"></i><br>
 					</div>
-					<b class="word">注销账号</b>
-				</a>
-				<a href="changeInfo.html">
+					<b class="word" style="margin-left:-77px;margin-top:87px">注销账号</b>
+				
+				<!-- </a> -->
+				<a href="/to_changeInfo">
 					<div class="col-md-1">
-						<i class="fa fa-keyboard-o fa-5x"></i><br />
+		 				<i class="fa fa-keyboard-o fa-5x"></i><br />
 					</div>
-					<b class="word">修改信息</b>
-				</a>
-				<a href="blockInfo.html">
+						<b class="word" >修改信息</b>
+				 </a>
+				<a href="/to_blockInfo"> 
 					<div class="col-md-1">
 						<i class="fa fa-search fa-5x"></i><br />
 					</div>
-					<b class="word">区块查询</b>
-				</a>
-				<a href="regUsers.html">
-					<div class="col-md-1">
+						<b class="word" style="margin-left: -97px;">区块交易记录</b>
+				 </a>
+				<a href="/to_regUsers">
+					<div class="col-md-1" >
 						<i class="fa fa-users fa-5x"></i><br />
 					</div>
-					<b class="word">已注册用户</b>
+						<b class="word" >已注册用户</b>
 				</a>
 				<a href="to_money">
 					<div class="col-md-1">
 						<i class="fa fa-bitcoin (alias) fa-5x"></i><br />
 					</div>
-					<b class="word" style="position: absolute;margin-left: -58px;margin-top: 86px;">钱包</b>
+						<b class="word" style="margin-left:-58px">钱包</b>
 				</a>
 			</div>
 		</div>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>logError</title>
+<title>changePageToLogin</title>
+<script type="text/javascript" th:src="@{/js/jquery.min.js}" ></script>
 <script>
 			function countDown(){
 				//获取初始时间
@@ -11,7 +12,7 @@
 				//获取到id为time标签中的数字时间
 				if(time.innerHTML == 0){
 					//等于0时清除计时，并跳转该指定页面
-					window.location.href="/index";
+					window.location.href="/to_login";
 				}else{
 					time.innerHTML = time.innerHTML-1;
 				}
@@ -22,7 +23,7 @@
       
 </head>
 <body>
-        <font >登录失败,<span id="Time" >2</span>s后将跳转至主页</font>
-
+        <font  th:text="${registerState}"></font>
+        <font  th:text="${changeState}" ></font><span id="Time" >2</span>s后将跳转至登录页
 </body>
 </html>

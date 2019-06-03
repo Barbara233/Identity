@@ -13,18 +13,18 @@
 			<div id="tytle">
 				<h1 style="color: white;">Identity Recognition System</h1>
 			</div>
-			<form action="#" method="get"  style="color: white;font-family: '微软雅黑';font-size:18px ;">
+			<form action="/selectRegUsers" method="get"  style="color: white;font-family: '微软雅黑';font-size:18px ;">
 				<div class="row">
 					<div class="col-md-3"></div>
-					<div class="col-md-3"><p class="col_1">用户地址</p><input type="text" name="address" class="form-control keyword"/></div>
-					<div class="col-md-3"><p class="col_1">注册用户名</p><input type="text" name="operate" class="form-control keyword"/></div>
+					<div class="col-md-3"><p class="col_1">用户地址</p><input type="text" name="publickey" class="form-control keyword"/></div>
+					<div class="col-md-3"><p class="col_1">注册用户名</p><input type="text" name="username" class="form-control keyword"/></div>
 				</div>
 				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-3">
 						<div style="margin-left: 42px;">
 							<p style="position: absolute;margin-left: -138px;">用户角色</p>
-							<select name="character" id="char">
+							<select name="role" id="char">
 								<option value="admin" class="opt">管理员</option>
 								<option value="programer" class="opt">开发人员</option>
 								<option value="tester" class="opt">测试人员</option>
@@ -32,9 +32,10 @@
 							</select>
 						</div>
 					</div>
-					<div class="col-md-3"><p class="col_2">注册时间</p><input type="datetime" name="regTime" class="form-control keyword"/></div>
+					<div class="col-md-3"><p class="col_2">注册时间</p><input type="text" name="time" class="form-control keyword"/></div>
 				</div>
-				<button type="submit" class="btn btn-primary" style="width: 102px; position: absolute;margin-left: 1172px;margin-top: -30px;">搜索</button>
+				<button type="submit" class="btn btn-primary" style="width: 102px; position: absolute;margin-left: 1172px;margin-top: -80px;">搜索</button>
+				<button type="button" onClick="javascript :history.back(-1);" class="btn btn-primary" style="width: 102px; position: absolute;margin-left: 1172px;margin-top: -30px;">返回</button>
 			</form>
 			<table class="table">
          		<thead>
@@ -46,29 +47,11 @@
          			</tr>
          		</thead>
          		<tbody>
-         			<tr>
-         				<td>1211111111111</td>
-         				<td>122222222222221</td>
-         				<td>2121212</td>
-         				<td>11212121</td>
-         			</tr>
-         			<tr>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         			</tr>
-         			<tr>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         			</tr>
-         			<tr>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         				<td>12121212</td>
-         				<td>12121212</td>
+         			<tr th:each="item:${session.regUser}">
+         				<td th:text="${{item.publickey}}"></td>
+         				<td th:text="${{item.username}}"></td>
+         				<td th:text="${{item.role}}"></td>
+         				<td th:text="${{item.time}}"></td>
          			</tr>
          		</tbody>
 			</table>
